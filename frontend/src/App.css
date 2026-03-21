@@ -1,0 +1,178 @@
+/* Ultra-premium metallic portfolio */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0a1214;
+    color: #e8f0f2;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+    background: #0a1214;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ===== ANIMATED BACKGROUND HANDLED BY CANVAS COMPONENT ===== */
+
+/* Diagonal stripes removed — clean background */
+
+/* Content above overlays */
+.App > * {
+    position: relative;
+    z-index: 3;
+}
+
+/* Metallic text with glint effect */
+.metallic-text {
+    background: linear-gradient(
+        135deg,
+        #c8d4d8 0%,
+        #e8f0f2 25%,
+        #b8c8ce 50%,
+        #e8f0f2 75%,
+        #c8d4d8 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% 200%;
+    animation: metallicGlint 4s ease-in-out infinite;
+    text-shadow: 0 0 30px rgba(232, 240, 242, 0.3);
+}
+
+@keyframes metallicGlint {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Continuous scrolling ticker */
+.ticker-wrap {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(160, 220, 210, 0.03) 0%, rgba(200, 230, 225, 0.06) 50%, rgba(160, 220, 210, 0.03) 100%);
+    border-top: 1px solid rgba(200, 220, 230, 0.1);
+    border-bottom: 1px solid rgba(200, 220, 230, 0.1);
+    padding: 20px 0;
+    backdrop-filter: blur(4px);
+}
+
+.ticker {
+    display: inline-block;
+    white-space: nowrap;
+    animation: tickerScroll 35s linear infinite;
+}
+
+.ticker-item {
+    display: inline;
+    font-size: 0.95rem;
+    color: rgba(200, 225, 220, 0.6);
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+@keyframes tickerScroll {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Glass effect with metallic tint */
+.glass-effect {
+    background: rgba(200, 220, 230, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(200, 220, 230, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a1214;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #2a3e42 0%, #1a2c2e 100%);
+    border-radius: 5px;
+    border: 2px solid #0a1214;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #3a4e52 0%, #2a3e42 100%);
+}
+
+/* Selection */
+::selection {
+    background-color: rgba(200, 220, 230, 0.3);
+    color: #e8f0f2;
+}
+
+/* Video container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    background: #0f1c1e;
+    border: 2px solid rgba(200, 220, 230, 0.1);
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Premium glow with metallic tint */
+.premium-glow {
+    box-shadow: 
+        0 0 60px rgba(200, 220, 230, 0.08),
+        inset 0 1px 0 rgba(200, 220, 230, 0.1);
+}
+
+/* Premium border with metallic sheen */
+.premium-border {
+    border: 2px solid rgba(200, 220, 230, 0.15);
+    box-shadow: 0 0 40px rgba(200, 220, 230, 0.05);
+}
