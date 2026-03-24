@@ -131,7 +131,7 @@ const Hero = () => {
           {/* Continuous Scrolling Ticker */}
           <div className="ticker-wrap mb-20">
             <div className="ticker">
-              <span className="ticker-item">Welcome to the 'SHO'verse, where we 'SHO' up for good storytelling / You've reached the department of better thinking / We don't put ideas on hold / All our lines are busy. Thinking / We apologise for the wait. Good ideas take longer /</span>
+              <span className="ticker-item">Welcome to the 'SHO'verse, where we 'SHO' up for good storytelling // You've reached the department of better thinking // We don't put ideas on hold // All our lines are busy. Thinking // We apologise for the wait. Good ideas take longer //</span>
             </div>
           </div>
 

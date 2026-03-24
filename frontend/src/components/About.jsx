@@ -7,7 +7,7 @@ const cards = [
   "I believe in INSIGHTFUL CREATION. The simplest of insights can house a goldmine of ideas.",
   "Starting off as a treatment note writer for ad films, I pivoted to advertising because I wanted to start at the source, solving real problems for brands.",
   "Now, with over a year's experience of managing cross-functional teams, I've spent my time working with design, strategy and production to deliver end-to-end creative solutions.",
-  "This website mirrors my (or anyone's) creative process. The calm waters of the mind, gently disturbed by ripples of creative chaos as you explore with curiosity.",
+  "This website mirrors my creative process. The calm waters of the mind, gently disturbed by ripples of creative chaos as you explore with curiosity.",
   "Feel like building something together? Press # to connect with me.",
 ];
 
